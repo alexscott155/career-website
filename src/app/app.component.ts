@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,10 @@ export class AppComponent {
 
   public open(modal: any): void {
     this.modalService.open(modal);
+  }
+
+  ngOnInit(){
+    AOS.init();
   }
 
 }
